@@ -1,0 +1,1 @@
+export type ResponsabilityTypeEnum  = 'ENTREGA' | 'VISITA' | 'COORDINAR';

@@ -1,0 +1,1 @@
+export type statesTraking = 'Pendiente' | 'Aprobado' | 'Ruta' | 'Anulado' | 'Entregado' | 'devolucion';

@@ -1,0 +1,1 @@
+export type SegmentTypeEnum = 'TIPO_COMERCIO';

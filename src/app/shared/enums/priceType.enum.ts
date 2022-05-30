@@ -1,0 +1,1 @@
+export type PriceType = 'APP' | 'WEB' | 'PRESENCIAL' | 'USUARIO_FINAL';

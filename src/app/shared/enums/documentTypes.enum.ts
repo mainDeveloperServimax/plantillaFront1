@@ -1,0 +1,1 @@
+export type DocumentTypeEnum = 'CC' | 'CE';

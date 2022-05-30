@@ -1,0 +1,1 @@
+export type DiscountTypeEnum = 'BENEFICIO'  | 'PROMOCION'  | 'PROD_CAMBIO';

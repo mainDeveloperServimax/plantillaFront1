@@ -1,0 +1,1 @@
+export type HomologationCodeTransactionType = 'COD_CARRO' | 'NUMERO_PEDIDO' | 'NUMERO DE FACTURA';

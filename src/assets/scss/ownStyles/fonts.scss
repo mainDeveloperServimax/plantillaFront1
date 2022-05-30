@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "WorkSans";
+    src: url(../../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format("truetype");
+    // font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "WorkSansSemiBold";
+    src: url(../../fonts/Work_Sans/static/WorkSans-SemiBold.ttf) format("truetype");
+    // font-weight: normal;
+    font-style: normal;
+}
+
+.txt-base {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.txt-title {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.txt-subtitle-1 {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.txt-subtitle-2 {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.txt-subtitle-3 {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.txt-body-1 {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.txt-body-2 {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.txt-body-3 {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.txt-label-1 {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.txt-label-2 {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.txt-label-3 {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.txt-span-1 {
+    font-family: "WorkSans",Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+}

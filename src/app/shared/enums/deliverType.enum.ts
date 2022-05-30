@@ -1,0 +1,1 @@
+export type DeliverTypeEnum = 'DENTRO_RUTA' | 'DENTRO_RECORRIDO' | 'FUERA_RUTA';

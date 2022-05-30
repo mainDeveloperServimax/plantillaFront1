@@ -1,0 +1,1 @@
+export type LevelProductEnum = 'MARCA' | 'DPTO' | 'CTGO' | 'PROD';

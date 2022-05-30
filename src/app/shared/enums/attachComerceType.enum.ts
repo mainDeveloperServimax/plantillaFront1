@@ -1,0 +1,1 @@
+export type AttachComereType = 'local' | 'documento' | 'nomencaltura';

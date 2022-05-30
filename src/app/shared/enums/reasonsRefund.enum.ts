@@ -1,0 +1,1 @@
+export type Reasons =  'MONEYLESS' | 'SCHEDULE' | 'PRICE' | 'BUSINESS_CLOSED' | 'NOT_ORDER ' | 'DISPATCH_ERROR' ;

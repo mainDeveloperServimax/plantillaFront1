@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-lg bkg-clr-1 txt-base">
+  <div class="main_logo">
+    <img class="h-100" (click)="goToHome()"
+      src="https://storage.googleapis.com/attachments-servimax-mercaderia/management/logo1.png" alt="Icono Servimax" />
+
+  </div>
+  <button class="navbar-toggler bkg-clr-1 border fnt-clr-3" type="button" (click)="openNav()">
+    <i class="bi bi-list "></i>
+  </button>
+  <!-- View Pc -->
+  <div class="d-none d-lg-block w-100">
+    <div class="nav w-100 d-flex align-items-center">
+      <div class="row d-flex justify-content-between">
+        <div *ngFor="let menuItem of menuItems" [ngClass]="{'d-none': hideElementScreen(menuItem?.finalUrl)}"
+          class="{{menuItem.class}} nav-item active col-sm-12 col-md">
+          <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+            <button *ngIf="!menuItem.children" class="btn btn-outline-light text-nowrap border-0" [id]="menuItem.id"
+              (click)="goToScreen(menuItem.path)">{{menuItem.title}}</button>
+            <button *ngIf="!!menuItem.children" class="btn btn-outline-light text-nowrap border-0" [id]="menuItem.id"
+              [ngbDropdownAnchor]="true" (click)="myDrop.open()">{{menuItem.title}}</button>
+
+
+            <div *ngIf="!!menuItem.children" ngbDropdownMenu [aria-labelledby]="menuItem.id">
+              <button *ngFor="let child of menuItem.children" [ngClass]="{'d-none': hideElementScreen(child?.finalUrl)}"
+                ngbDropdownItem (click)="goToScreen(child.path)">{{child.title}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ml-auto row">
+        <div *ngIf="roles.length > 1" class="px-1 ">
+          <form [formGroup]="selectRoleForm" autocomplete="off">
+            <select class="form-control" formControlName="currentRole">
+              <option *ngFor="let role of roles" value="{{role.id.toString()}}">
+                {{role.name}}
+              </option>
+            </select>
+          </form>
+
+        </div>
+        <div class="px-1 ">
+          <button class="btn-srv-white--clr-1--rounded" (click)="closeSession()">{{LABELS.closeSession}} </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</nav>
+
+
+<!-- VIEW PHONE -->
+<div class="d-block d-lg-none bkg-clr-1 sidebar" id="mySidebar"><br>
+  <div class="w-100 d-flex justify-content-end">
+    <button type="button" class="border-0 bg-transparent" (click)="closeNav()"><i class="bi bi-x-lg" style="font-size: 150%;"></i></button>
+  </div>
+  <div class="offcanvas-body">
+              <div class="profilePhoto">
+                  <div class="d-flex justify-content-between align-items-center " data-toggle="collapse" data-target="#multiCollapseExample1" role="button" aria-expanded="false"   aria-controls="multiCollapseExample1"><img src="assets/img/servi.png"  class="img rounded-circle" alt="photo">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label class="labelUser">
+                      {{user.firstName}}
+                    </label>
+                  </div>
+              </div>
+          </div>
+          <div class="row justify-content-center h-20 align-self-center">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card-body"style="border-color: transparent;">
+                  <div *ngIf="roles.length > 1" class="px-1 ">
+                    <form [formGroup]="selectRoleForm" autocomplete="off">
+                      <select class="form-control" formControlName="currentRole">
+                        <option *ngFor="let role of roles" value="{{role.id.toString()}}">
+                          {{role.name}}
+                        </option>
+                      </select>
+                     </form>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+  <br>
+<nav class="nav row">
+      <ul>
+            <div class="row justify-content-center h-20 align-self-center">
+              <div *ngFor="let menuItem of menuItems" [ngClass]="{'d-none': hideElementScreen(menuItem?.finalUrl)}"
+                class="{{menuItem.class}} nav-item active col-sm-12 col-md select">
+                <li class="card color" (click)="buttonPrincipal(menuItem)">
+                  <div class="d-inline-block select">
+                    <span class=" border-0 select fnt-black"
+                       >{{menuItem.title}} &nbsp; <i class="bi bi-caret-down-fill"></i></span><br>
+                  </div><br>
+                </li>
+                <div stylw="margin-left: 30%">
+                  <div  *ngIf="!!menuItem.children" class="itemChild" [id]="'_'+menuItem.id">
+                    <button class="button color"*ngFor="let child of menuItem.children" [ngClass]="{'d-none': hideElementScreen(child?.finalUrl)}"
+                       (click)="goToScreen(child.path)">{{child.title}}<br></button><br>
+                  </div>
+                </div>
+               </div>
+             </div>
+        </ul><br>
+ </nav>
+          <div class="w-100 d-flex justify-content-between" style="margin-top: 150%; margin-left: 45%">
+            <button class="btn-srv-white--clr-1--rounded" (click)="closeSession()"><i class="bi bi-box-arrow-right"></i></button>
+          </div>
+ </div>

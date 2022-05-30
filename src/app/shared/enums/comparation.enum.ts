@@ -1,0 +1,1 @@
+export type ComparationTypesEnum = 'BTW' | 'GRE' | 'EQ' | 'EACH';

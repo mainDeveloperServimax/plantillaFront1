@@ -1,0 +1,1 @@
+export type PromotionTypeEnum  = 'PORCENTAJE_PROM' | 'REBAJA_PROM';

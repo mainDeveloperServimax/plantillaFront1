@@ -1,0 +1,1 @@
+export type FrecuencyDashboardEnum = 'Month' | 'Week';

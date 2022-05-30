@@ -1,0 +1,83 @@
+@import "src/assets/scss/ownStyles/color-constants.scss";
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 45px;
+    transition: width 0.5s;
+    z-index: 999;
+  }
+  .color{
+    color: $clr-5;
+  }
+  .itemChild{
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    transition: height 0.5s;
+    margin-left: 40%;
+    }
+.button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    text-align: center;
+    left: 45%;
+}
+.select{
+    margin-left: -3%;
+  }
+  .nav {
+    color: $clr-5;
+    ul {
+        position: absolute;
+        left: 0%;
+        margin-top: 3px;
+        margin-left: -31px;
+
+
+      li {
+        position: relative;
+        display: block;
+        margin-bottom: 5px;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        animation: fadeIn 0.5s linear;
+        animation-fill-mode: both;
+        border-bottom-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+        border-end-start-radius: 10px;
+
+      }
+  }
+}
+
+.profilePhoto{
+    width: 10%;
+    height: 10%;
+}
+ .labelUser{
+   color: $clr-4;
+ }
+
+
+.img{
+    margin-left: 250%;
+    width: 250%;
+    background-color: $clr-4;
+    border-color: $clr-black;
+ }
+
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+  }

@@ -1,0 +1,1 @@
+export type StateComerce = 'ACT_C'| 'INA_C'| 'REG'| 'PEND';

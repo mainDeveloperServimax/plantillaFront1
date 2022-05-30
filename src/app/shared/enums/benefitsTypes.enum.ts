@@ -1,0 +1,1 @@
+export type BenefitsTypesEnum = 'DINERO' | 'PORCENTAJE' |  'PRODB';

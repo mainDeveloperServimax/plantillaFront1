@@ -1,0 +1,1 @@
+export type ClasificationTypeEnum = 'MARCA' | 'DPTO' | 'CTGO' | 'PROD' | 'SUB_CTGO';

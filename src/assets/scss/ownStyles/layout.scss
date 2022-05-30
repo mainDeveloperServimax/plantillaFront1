@@ -1,0 +1,267 @@
+@import './color-constants.scss';
+
+// standars
+.lowercase {
+    text-transform: lowercase;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.inputFileDot{
+    border: 2px dashed $clr-1;
+}
+.shadow {
+    box-shadow: 0px 5px 6px rgba($color:$clr-black, $alpha:0.4);
+}
+
+.d {
+    &-flex {
+        display: flex;
+    }
+
+    &-none {
+        display: none;
+    }
+}
+
+.d-scroll-none::-webkit-scrollbar {
+    display: none;
+}
+
+.overflow {
+    &-y {
+        &-auto {
+            overflow-y: auto;
+        }
+    }
+
+    &-x {
+        &-hidden {
+            overflow-x: hidden;
+        }
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+    $cursor: &;
+
+    & * {
+        @extend #{$cursor};
+    }
+}
+
+// generics
+.btn-srv {
+    font-family: 'WorkSans';
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-weight: 600;
+    box-shadow: 0px 5px 6px rgba($color:$clr-black, $alpha:0.4);
+    $btn: &;
+
+    &-white {
+        @extend #{$btn};
+        background-color: $clr-white;
+        $btn-white: &;
+
+        &--clr-1 {
+            @extend #{$btn-white};
+            color: $clr-1;
+
+            &:hover {
+                border: 1px solid $clr-1;
+            }
+
+            &:disabled {
+                color: $clr-gray-50;
+                background-color: $clr-gray-90;
+                cursor: default;
+                
+            }
+
+            $btn-clr:&;
+
+            &--rounded {
+                @extend #{$btn-clr};
+                border-radius: 100px;
+            }
+        }
+        
+        &--clr-3 {
+            @extend #{$btn-white};
+            color: $clr-3;
+
+            &:hover {
+                border: 1px solid $clr-3;
+            }
+
+            &:disabled {
+                color: $clr-gray-50;
+                background-color: $clr-gray-90;
+                cursor: default;
+                
+            }
+
+            $btn-clr:&;
+
+            &--rounded {
+                @extend #{$btn-clr};
+                border-radius: 100px;
+            }
+        }
+        &--clr-2 {
+            @extend #{$btn-white};
+            color: $clr-2;
+
+            &:hover {
+                border: 1px solid $clr-2;
+            }
+
+            &:disabled {
+                color: $clr-gray-50;
+                background-color: $clr-gray-90;
+                cursor: default;
+                
+            }
+
+            $btn-clr:&;
+
+            &--rounded {
+                @extend #{$btn-clr};
+                border-radius: 100px;
+            }
+        }
+    }
+
+    &-clr-1 {
+        @extend #{$btn};
+        color: $clr-white;
+        background-color: $clr-1;
+
+        &:hover {
+            background-color: $clr-1;
+            opacity: 0.9;
+        }
+
+        &:disabled {
+            background-color: $clr-gray-50;
+            cursor: default;
+        }
+
+        $btn-clr: &;
+
+        &--rounded {
+            @extend #{$btn-clr};
+            border-radius: 100px;
+        }
+    }
+
+    &-clr-2 {
+        @extend #{$btn};
+        color: $clr-white;
+        background-color: $clr-2;
+
+        &:hover {
+            background-color: $clr-1;
+            opacity: 0.9;
+        }
+
+        &:disabled {
+            background-color: $clr-gray-50;
+            cursor: default;
+        }
+
+        $btn-clr: &;
+
+        &--rounded {
+            @extend #{$btn-clr};
+            border-radius: 100px;
+        }
+    }
+}
+
+.input-control {
+    & .Mui-disabled {
+        background-color: $clr-gray-90;
+    }
+
+    &.my-custom {
+        & .MuiInputBase-input {
+            padding: 7px 5px;
+        }
+    }
+
+}
+
+// control
+
+.MuiBox-root {
+    box-sizing: border-box;
+}
+
+
+
+.border-dotted {
+    border: 3px dotted $clr-gray-90;
+    $border: &;
+
+    &--left {
+        @extend #{$border};
+        border-top: 0;
+        border-bottom: 0;
+        border-right: 0;
+    }
+
+    &--right {
+        @extend #{$border};
+        border-top: 0;
+        border-bottom: 0;
+        border-left: 0;
+    }
+
+    &--top {
+        @extend #{$border};
+        border-bottom: 0;
+        border-right: 0;
+        border-left: 0;
+    }
+
+    &--bottom {
+        @extend #{$border};
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+    }
+
+    &--x {
+        @extend #{$border};
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    &--y {
+        @extend #{$border};
+        border-right: 0;
+        border-left: 0;
+    }
+}
+
+.main_logo {
+  height: 50px;
+  padding: 10px 20px 0px 20px;
+  z-index: 110;
+}
